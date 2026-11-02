@@ -1,0 +1,187 @@
+import React from "react";
+import "./App.css";
+
+function App() {
+  return (
+    <div>
+      <nav>
+        <h2>RIGHT CHOICE SALON</h2>
+        <div>
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <section className="hero" id="home">
+        <h1>WELCOME TO RIGHT CHOICE SALON</h1>
+        <p>Your Style, Our Passion</p>
+        <a href="#services" className="btn">Explore Services</a>
+      </section>
+
+      <section id="services">
+        <h1>OUR SERVICES</h1>
+        <div className="cards">
+          <div className="card">
+            <h2>Hair Cutting</h2>
+            <p>Professional Hair Cutting</p>
+            <h3>₹150</h3>
+          </div>
+
+          <div className="card">
+            <h2>Hair Styling</h2>
+            <p>Modern Hair Styling</p>
+            <h3>₹250</h3>
+          </div>
+
+          <div className="card">
+            <h2>Hair Spa</h2>
+            <p>Relaxing Hair Treatment</p>
+            <h3>₹500</h3>
+          </div>
+
+          <div className="card">
+            <h2>Beard Styling</h2>
+            <p>Professional Beard Grooming</p>
+            <h3>₹100</h3>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <h1>ABOUT US</h1>
+        <p>
+          Welcome to Right Choice Salon.
+          We provide professional beauty,
+          haircut and grooming services.
+          Your satisfaction is our priority.
+        </p>
+      </section>
+
+      <section id="contact">
+        <h1>CONTACT US</h1>
+        <p>Visit Right Choice Salon Today!</p>
+        <p>Phone: +91 XXXXXXXXXX</p>
+      </section>
+
+      <footer>
+        <p>© 2026 Right Choice Salon | All Rights Reserved</p>
+      </footer>
+    </div>
+  );
+}
+
+export default App;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+}
+
+nav {
+  background: black;
+  padding: 22px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav h2 {
+  color: gold;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+  background: linear-gradient(135deg, #222, #704b20);
+}
+
+.hero h1 {
+  font-size: 38px;
+  color: gold;
+}
+
+.hero p {
+  margin: 20px;
+  font-size: 22px;
+}
+
+.btn {
+  display: inline-block;
+  background: gold;
+  color: black;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+section {
+  text-align: center;
+  padding: 55px 20px;
+}
+
+section h1 {
+  color: gold;
+  margin-bottom: 25px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background: #292929;
+  padding: 30px;
+  width: 220px;
+  border: 1px solid gold;
+  border-radius: 10px;
+}
+
+.card h3 {
+  color: gold;
+  margin-top: 15px;
+}
+
+#about p {
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+footer {
+  background: black;
+  text-align: center;
+  padding: 20px;
+  color: gold;
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav a {
+    margin: 5px;
+  }
+
+  .hero h1 {
+    font-size: 27px;
+  }
+}
